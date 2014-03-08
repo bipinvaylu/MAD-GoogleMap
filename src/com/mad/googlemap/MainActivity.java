@@ -88,6 +88,9 @@ public class MainActivity extends Activity
 			}
 		});
 
+		// Set building mode
+		mMap.setBuildingsEnabled(true);
+
 	}
 
 	@Override
