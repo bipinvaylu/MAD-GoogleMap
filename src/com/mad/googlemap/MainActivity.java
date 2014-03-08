@@ -61,7 +61,7 @@ public class MainActivity extends Activity
 			}
 		});
 
-		// Map UI Settings
+		// Change Map UI Settings
 		// Showing Current Location
 		mMap.setMyLocationEnabled(true);
 
@@ -70,6 +70,23 @@ public class MainActivity extends Activity
 
 		// Zooming Gestures
 		// mMap.getUiSettings().setZoomGesturesEnabled(true);
+
+		// Change Map Type
+		findViewById(R.id.mapTypeNormal).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			}
+		});
+
+		findViewById(R.id.mapTypeHybrid).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+			}
+		});
 
 	}
 
