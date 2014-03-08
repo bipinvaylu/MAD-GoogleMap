@@ -40,16 +40,6 @@ public class MainActivity extends Activity
 
 		mMap.addMarker(markerAhmedabad);
 
-		// Map UI Settings
-		// Showing Current Location
-		mMap.setMyLocationEnabled(true);
-
-		// Zooming Buttons
-		// mMap.getUiSettings().setZoomControlsEnabled(true);
-
-		// Zooming Gestures
-		// mMap.getUiSettings().setZoomGesturesEnabled(true);
-
 		findViewById(R.id.locationIndia).setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -70,6 +60,17 @@ public class MainActivity extends Activity
 
 			}
 		});
+
+		// Map UI Settings
+		// Showing Current Location
+		mMap.setMyLocationEnabled(true);
+
+		// Zooming Buttons
+		// mMap.getUiSettings().setZoomControlsEnabled(true);
+
+		// Zooming Gestures
+		// mMap.getUiSettings().setZoomGesturesEnabled(true);
+
 	}
 
 	@Override
