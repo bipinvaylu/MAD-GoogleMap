@@ -3,6 +3,8 @@ package com.mad.googlemap;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,9 +40,26 @@ public class MainActivity extends Activity
 
 		mMap.addMarker(markerAhmedabad);
 
-		CameraPosition cameraPosition = new CameraPosition.Builder().target(AHMEDABAD).zoom(5).build();
+		findViewById(R.id.locationIndia).setOnClickListener(new OnClickListener() {
 
-		mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+			@Override
+			public void onClick(View v) {
+				CameraPosition cameraPosition = new CameraPosition.Builder().target(INDIA).zoom(12).build();
+
+				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+			}
+		});
+
+		findViewById(R.id.locationAhmedabad).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				CameraPosition cameraPosition = new CameraPosition.Builder().target(AHMEDABAD).zoom(12).build();
+
+				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+			}
+		});
 	}
 
 	@Override

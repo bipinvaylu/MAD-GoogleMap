@@ -6,20 +6,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/locationIndia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:text=" India " />
+            android:layout_margin="1dp"
+            android:text="India" />
 
         <Button
             android:id="@+id/locationAhmedabad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Ahmedabad " />
+            android:layout_margin="1dp"
+            android:text="Ahmedabad" />
     </LinearLayout>
 
     <fragment
@@ -27,6 +29,7 @@
         android:name="com.mad.googlemap.MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
         class="com.google.android.gms.maps.MapFragment" />
 
 </LinearLayout>
